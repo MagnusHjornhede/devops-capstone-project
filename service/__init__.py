@@ -20,6 +20,12 @@ from service import routes, models  # noqa: F401 E402
 # pylint: disable=wrong-import-position
 from service.common import error_handlers, cli_commands  # noqa: F401 E402
 
+from flask_talisman import Talisman
+talisman = Talisman(app)
+
+from flask_cors import CORS
+CORS(app)
+
 # Set up logging for production
 log_handlers.init_logging(app, "gunicorn.error")
 
