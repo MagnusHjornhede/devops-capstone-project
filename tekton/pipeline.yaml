@@ -11,10 +11,10 @@ metadata:
 spec:
   workspaces:
     - name: pipeline-workspace
-    - name: build-image
   params:
     - name: repo-url
     - name: branch
+    - name: build-image
       default: main
   tasks:
     - name: init
